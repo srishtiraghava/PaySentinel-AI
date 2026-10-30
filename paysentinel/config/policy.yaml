@@ -1,0 +1,18 @@
+policy:
+  version: "1.0.0"
+  currency: "USD"
+
+  payment_limits:
+    max_single_payment: "1000.00"
+    daily_global_limit: "5000.00"
+    daily_supplier_limit: "2000.00"
+
+  supplier_controls:
+    require_allowlist: true
+    require_active_status: true
+    bank_change_requires_approval: true
+
+  invoice_controls:
+    require_purchase_order: true
+    require_goods_received: true
+    detect_duplicate_invoice_numbers: true
